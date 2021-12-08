@@ -1,0 +1,150 @@
+@import '../../global/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+@keyframes logo-div-animation {
+  from {
+    width: 200px;
+  }
+
+  to {
+    width: 10px;
+  }
+}
+
+@keyframes logo-animation {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes text-area-animation {
+  from {
+    width: 110px;
+    right: 65px;
+  }
+
+  to {
+    width: 0;
+    right: 225px;
+  }
+}
+
+// @keyframes login-text-animation {
+//   from {
+//     width: 0px;
+//   }
+//   to {
+//     // width: auto;
+//   }
+// }
+
+#content {
+  width: 100%;
+  // min-width: 550px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-purple;
+
+  .login-modal {
+    width: 450px;
+    height: 650px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-top: 30px;
+    border-radius: 22px;
+    // box-shadow: ;
+
+    .logo-container {
+      // padding: 0 55px 0 55px;
+      display: flex;
+      // background-color: red;
+      margin-top: 30px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-height: 200px;
+
+      .logo-div {
+        animation-name: logo-div-animation;
+        animation-duration: 1.2s;
+        animation-fill-mode: forwards;
+        animation-direction: reverse;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        border-radius: 22px;
+        background-color: $light-purple;
+
+        .logo {
+          animation-name: logo-animation;
+          animation-duration: 1.2s;
+          animation-fill-mode: forwards;
+          animation-direction: reverse;
+
+          width: 100%;
+        }
+      }
+
+      .text-area {
+        animation-name: text-area-animation;
+        animation-duration: 1.2s;
+        animation-fill-mode: forwards;
+        animation-direction: reverse;
+
+        // background-color: blue;
+        width: 115px;
+        text-align: left;
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+
+        .text-logo {
+          font-size: 50px;
+          font-weight: 500;
+          color: $light-purple;
+          font-family: 'PT Sans', sans-serif;
+        }
+      }
+    }
+
+    .login-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: login-text-animation;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+      animation-direction: reverse;
+      margin-top: 50px;
+
+      h2 {
+        font-weight: 700;
+        font-size: 24px;
+        color: $light-purple;
+      }
+    }
+  }
+
+  .form-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+
+  }
+}

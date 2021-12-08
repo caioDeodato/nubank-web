@@ -1,0 +1,33 @@
+@import '../../global/colors.scss';
+
+.password-container {
+  width: 300px;
+  height: 40px;
+  color: $black;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-width: 0px 0px 3px 0px;
+  border-color: rgb(172, 172, 172);
+
+  #pass {
+    padding: 5px 5px;
+    flex: 5;
+    background-color: transparent;
+    border-width: 0px 0px 3px 0px;
+    border-color: rgb(172, 172, 172);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .eye {
+    flex: 1;
+    background-color: transparent;
+    border-width: 0px 0px 3px 0px;
+    border-color: rgb(172, 172, 172);
+    border-style: solid;
+  }
+}
