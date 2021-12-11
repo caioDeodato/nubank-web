@@ -22,7 +22,7 @@ export default function Login() {
           <form action="#">
             <input
               className="input"
-              type="text"
+              type="email"
               name="login"
               placeholder="CPF ou e-mail"
             />
